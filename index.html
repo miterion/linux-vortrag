@@ -9,6 +9,7 @@
 
 	<link rel="stylesheet" href="revealjs/css/reveal.css">
 	<link rel="stylesheet" href="revealjs/css/theme/black.css">
+	<link rel="stylesheet" href="custom.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
@@ -29,7 +30,7 @@
 			<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
 				<script type="text/template">
 				# Linux-Workshop
-				#### Winterophase 17/18
+				#### Winterophase 18/19
 				Heiko Carrasco
 
 				--
@@ -50,7 +51,7 @@
 				### Was ist Linux?
 				> Als Linux oder GNU/Linux bezeichnet man in der Regel freie, unix-ähnliche Mehrbenutzer-Betriebssysteme, die auf dem Linux-Kernel und wesentlich auf GNU-Software basieren.
 
-				Wikipedia, schlaues Internetzlexikon<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
+				Wikipedia, schlaues Internetlexikon<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
 
 				--
 
@@ -63,10 +64,11 @@
 				### Warum ein Vortrag und kein Workshop?
 				+ Linux ist komplex<!-- .element: class="fragment" data-fragment-index="1" -->
 				+ Einstieg ein bisschen erleichtern<!-- .element: class="fragment" data-fragment-index="2" -->
+				+ Installationsworkshop morgen<!-- .element: class="fragment" data-fragment-index="3" -->
 
 				---
 
-				<!-- .slide: data-background-video="img/history.mp4"-->
+				<!-- .slide: data-background-video="img/history.mp4" data-background-video-loop="true"-->
 				# Geschichte
 
 				--
@@ -77,16 +79,28 @@
 
 				Linus Torvalds<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
 
-				Freundlicher Nerd in deiner Nachbarschaft<!-- .element: class="fragment fade-up" data-fragment-index="1" -->
-
 
 				--
 
 				### Geschichte
+				+ Am Anfang war Unix<!-- .element: class="fragment" data-fragment-index="1" -->
+				+ Entwickelt von Ken Thompson und Dennis Ritchie (Bell Labs)<!-- .element: class="fragment" data-fragment-index="2" -->
+				+ Ziel: Möglichst einfaches Betriebssystemdesign<!-- .element: class="fragment" data-fragment-index="3" -->
+
+				--
+
+				### Geschichte (Unix)
+				<img style="width:60%;" data-src="img/1000px-Unix_history-simple.svg.png">
+
+				<small>By Eraserhead1, Infinity0, Sav_vas [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0 </a> or <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a>], <a href="https://commons.wikimedia.org/wiki/File:Unix_history-simple.svg">via Wikimedia Commons</a></small>
+
+				--
+
+				### Geschichte (Cont'd)
 				+ 1980 nutzten die meisten Unis (unfreie) Unixderivate<!-- .element: class="fragment" data-fragment-index="1" -->
 				+ Torvalds, damals Student ('91), wollte sich einen Client für den Server der Uni schreiben<!-- .element: class="fragment" data-fragment-index="2" -->
-				+ "mist, das ist jetzt aus Versehen ein Betriebssystem geworden"<!-- .element: class="fragment" data-fragment-index="3" -->
-				+ Linux als Kombi aus Torvalds Vornamen und "seinem" Wunschnamen freax<!-- .element: class="fragment" data-fragment-index="4" -->
+				+ Immer mehr Funktionen angefügt<!-- .element: class="fragment" data-fragment-index="3" -->
+				+ OpenSourced unter dem Namen Linux (Linus + Freax)<!-- .element: class="fragment" data-fragment-index="4" -->
 
 				---
 
@@ -96,10 +110,11 @@
 				--
 
 				### Was ist Open Source?
-				+ Der Quellcode ist öffentlich (damit ist das Programm meistens kostenlos :D )<!-- .element: class="fragment" data-fragment-index="1" -->
-				+ Code steht unter einer OpenSource Lizenz (z.B. GNU, Apache, MIT, etc.)<!-- .element: class="fragment" data-fragment-index="2" -->
-					+ Code darf modifiziert werden
-					+ Regelungen was die Weiterverbreitung betrifft
+				+ Der Quellcode ist öffentlich<!-- .element: class="fragment" data-fragment-index="1" -->
+					+ (damit ist das Programm meistens kostenlos :D )<!-- .element: class="fragment" data-fragment-index="2" -->
+				+ Code steht unter einer OpenSource Lizenz (z.B. GNU, Apache, MIT, etc.)<!-- .element: class="fragment" data-fragment-index="3" -->
+					+ Code darf modifiziert werden<!-- .element: class="fragment" data-fragment-index="4" -->
+					+ Regelungen was die Weiterverbreitung betrifft<!-- .element: class="fragment" data-fragment-index="5" -->
 
 				--
 
@@ -119,16 +134,17 @@
 				## Vorteile
 
 				+ Weniger Sicherheitslücken (Viele-Augen-Prinzip)<!-- .element: class="fragment" data-fragment-index="1" -->
-				+ Lernen durch Code anderer<!-- .element: class="fragment" data-fragment-index="2" -->
-				+ Keine versteckten Sicherheitslücken (Backdoors)<!-- .element: class="fragment" data-fragment-index="3" -->
+					+ vor allem weniger Backdoors<!-- .element: class="fragment" data-fragment-index="2" -->
+				+ Lernen durch Code anderer<!-- .element: class="fragment" data-fragment-index="3" -->
 
 				---
 
-				<!-- .slide: data-background-image="img/wheatly.png" -->
+				<!-- .slide: data-background-video="img/kernel.mp4" data-background-video-loop="true"-->
 				# Kernel
 
 				--
 
+				### Kernel
 				+ Kern des Betriebssystem <!-- .element: class="fragment" data-fragment-index="1" -->
 				+ Schnittstelle zwischen Software und Hardware <!-- .element: class="fragment" data-fragment-index="2" -->
 				+ Prozessverwaltung, Speicherverwaltung, Input/Output (IO), etc... <!-- .element: class="fragment" data-fragment-index="3" -->
@@ -141,9 +157,7 @@
 
 				### GNU/Linux
 				+ Linux nur der Kernel<!-- .element: class="fragment" data-fragment-index="1" -->
-
 				+ Für funktionales System werden einige Tools benötigt (shell, compiler)<!-- .element: class="fragment" data-fragment-index="2" -->
-
 				+ Stallman to the rescue<!-- .element: class="fragment" data-fragment-index="3" -->
 
 				--
@@ -159,9 +173,7 @@
 				<!-- .slide: data-background-image="img/stallman.jpg" data-background-repeat: "space" -->
 				### GNU Projekt
 				+ GNU sollte ein freies Unix werden (Gnu is Not Unix)<!-- .element: class="fragment" data-fragment-index="1" -->
-
 				+ Kernel hängt ein "bisschen" hinterher<!-- .element: class="fragment" data-fragment-index="2" -->
-
 				+ Linux Kernel + GNU Software == Nice<!-- .element: class="fragment" data-fragment-index="3" -->
 
 				---
@@ -172,13 +184,10 @@
 				--
 
 				### Distros
-				+ Fertige "Pakete" mit Kernel und Programmen<!-- .element: class="fragment" data-fragment-index="1" -->
+				+ Sammlungen mit Kernel und Programmen<!-- .element: class="fragment" data-fragment-index="1" -->
 				+ Meistens mit einer Paketverwaltung<!-- .element: class="fragment" data-fragment-index="2" -->
-
-				+ Fertige installierbare Images<!-- .element: class="fragment" data-fragment-index="3" -->
-
-				+ Meistens von Communities oder <!-- .element: class="fragment" data-fragment-index="4" -->
-Firmen veröffentlicht
+				+ Fertige, installierbare Images<!-- .element: class="fragment" data-fragment-index="3" -->
+				+ Meistens von Communities oder Firmen veröffentlicht<!-- .element: class="fragment" data-fragment-index="4" -->
 
 				--
 
@@ -188,7 +197,7 @@ Firmen veröffentlicht
 				<img style="width:45%; background: white;" data-src="img/mint.png">
 				<img style="width:45%;" data-src="img/arch.png">
 
-				--
+				---
 
 				<!-- .slide: data-background-image="img/xp-blur.jpg" -->
 				# Desktop-Umgebungen
@@ -198,9 +207,7 @@ Firmen veröffentlicht
 				<!-- .slide: data-background-image="img/style.jpg" data-background-repeat: "space" -->
 				### Style your Desktop
 				+ Wahl zwischen verschiedenen Benutzerkonzepten<!-- .element: class="fragment" data-fragment-index="1" -->
-
 				+ Design kann angepasst werden<!-- .element: class="fragment" data-fragment-index="2" -->
-
 				+ Meistens mit Sammlungen von Programmen verbunden<!-- .element: class="fragment" data-fragment-index="3" -->
 
 				--
@@ -226,10 +233,28 @@ Firmen veröffentlicht
 				--
 
 				### Konsole
-				+ Texteingaben<!-- .element: class="fragment" data-fragment-index="1" -->
+				+ Steuern des Computers über Kommandos<!-- .element: class="fragment" data-fragment-index="1" -->
 				+ Direkter Zugang zum Betriebssystem<!-- .element: class="fragment" data-fragment-index="2" -->
 
-				+ Nicht klicky-bunty, sehr hacky<!-- .element: class="fragment" data-fragment-index="3" -->
+				--
+
+				<!-- .slide: data-transition="slide-in fade-out" -->
+
+				### Wozu braucht man das?
+				+ Schnelle und einfache Ausführung von Programmen<!-- .element: class="fragment" data-fragment-index="2" -->
+
+
+				--
+
+				<img style="width:100%;" data-src="img/vi.svg">
+
+				--
+
+				<!-- .slide: data-transition="fade" -->
+				### Wozu braucht man das?
+				+ Schnelle und einfache Ausführung von Programmen
+				+ Dateioperationen gehen häufig relativ schnell und einfach<!-- .element: class="fragment" data-fragment-index="1" -->
+
 
 				---
 
@@ -237,18 +262,13 @@ Firmen veröffentlicht
 				# Das Dateisystem
 
 				--
-				
+
 				### Die Ordnerstruktur
 				+ / \- oberstes (root) Verzeichnis<!-- .element: class="fragment" data-fragment-index="1" -->
-
 				+ /boot \- beim Start benötigte Dateien<!-- .element: class="fragment" data-fragment-index="2" -->
-
 				+ /etc \- Globale Einstellungen<!-- .element: class="fragment" data-fragment-index="3" -->
-
 				+ /home \- Verzeichnisse der Nutzer*innen<!-- .element: class="fragment" data-fragment-index="4" -->
-
 				+ /tmp \- temporäre Dateien<!-- .element: class="fragment" data-fragment-index="5" -->
-
 				+ /usr \- Systemteile, Software, Bibliotheken<!-- .element: class="fragment" data-fragment-index="6" -->
 
 				--
@@ -256,24 +276,6 @@ Firmen veröffentlicht
 				### Wie funktioniert es?
 				+ Dateien haben Attribute (read, write execute)<!-- .element: class="fragment" data-fragment-index="1" -->
 				+ Dateien haben Eigentümer*innen und Gruppenzugehörigkeiten<!-- .element: class="fragment" data-fragment-index="2" -->
-
-				--
-
-				<!-- .slide: data-background-video="img/warning.mp4"-->
-				### Achtung Verwechslungsgefahr
-
-				--
-
-				### Achtung Verwechslungsgefahr
-				+ root Verzeichnis (/) nicht mit dem root-User verwechseln<!-- .element: class="fragment" data-fragment-index="1" -->
-
-				+ Normale User können nur auf ihre eigenen Verzeichnisse zugreifen<!-- .element: class="fragment" data-fragment-index="2" -->
-
-				+ für systembeinflussende Aktionen werden root-Rechte benötigt<!-- .element: class="fragment" data-fragment-index="3" -->
-
-					+ Software installieren, systemweite Einstellungen vorn<!-- .element: class="fragment" data-fragment-index="4" -->
-ehmen
-				+ User können mit sudo Befehle als root ausführen<!-- .element: class="fragment" data-fragment-index="5" -->
 
 				---
 
@@ -284,15 +286,23 @@ ehmen
 
 				--
 
-				### Wie kriege ich meine Linuxprogramme?
+				### Installieren von Software unter Windows
+				1. Im Netz nach einer Installationdatei suchen<!-- .element: class="fragment" data-fragment-index="1" -->
+				+ Mit Adminrechten ausführen<!-- .element: class="fragment" data-fragment-index="2" -->
+				+ Hoffen, dass man keinen Virus bekommen hat<!-- .element: class="fragment" data-fragment-index="3" -->
+
+				--
+
+				### Installieren von Software unter Linux
 				+ Linuxdistributionen haben meistens eine Paketverwaltung<!-- .element: class="fragment" data-fragment-index="1" -->
-
 				+ Damit lassen sich Programme mit einem Klick bzw. einem Kommando nachinstallieren<!-- .element: class="fragment" data-fragment-index="2" -->
-
-				+ Abhängigkeiten werden intelligent gelöst<!-- .element: class="fragment" data-fragment-index="3" -->
-
+				+ Abhängigkeiten zu anderen Programmen werden intelligent gelöst<!-- .element: class="fragment" data-fragment-index="3" -->
 				+ Anwendungen werden up-to-date gehalten<!-- .element: class="fragment" data-fragment-index="4" -->
 
+				--
+
+				### Gnome Software
+				<img style="width:70%;" data-src="img/gnome_software.png">
 
 				---
 
@@ -301,19 +311,11 @@ ehmen
 
 				--
 
-				### Linux ist sehr sicher
-				![muchsecure](img/muchsecure.jpg)
-
-				--
-
-				### Warum?
+				### Warum ist Linux sicher(-er)?
 				+ Wenig Verbreitung == weniger Viren<!-- .element: class="fragment" data-fragment-index="1" -->
-
 				+ OpenSource-Software<!-- .element: class="fragment" data-fragment-index="2" -->
-
 				+ schnelle Sicherheitsupdates in den Repositories<!-- .element: class="fragment" data-fragment-index="3" -->
-
-				+ gute Rechteverwaltung<!-- .element: class="fragment" data-fragment-index="3" -->
+				+ gute Rechteverwaltung<!-- .element: class="fragment" data-fragment-index="4" -->
 
 				---
 
@@ -324,45 +326,34 @@ ehmen
 
 				### "Aber ich brauche noch dieses Programm..."
 				+ Linux kann parallel zu Windows installiert werden<!-- .element: class="fragment" data-fragment-index="1" -->
-
 				+ Virtuelle Maschine mit Windows<!-- .element: class="fragment" data-fragment-index="2" -->
-
 				+ Direkt unter Linux mit Wine laufen lassen<!-- .element: class="fragment" data-fragment-index="3" -->
 
 				---
 
-				<!-- .slide: data-background-video="img/summary.mp4" -->
+				<!-- .slide: data-background-video="img/end.mp4" -->
 				# Abschluss
 
 				--
 
-				### Verbreitung
+				### Verbreitung von Linux
 
 				+ Sehr stark:<!-- .element: class="fragment" data-fragment-index="1" -->
-
-				  + Server<!-- .element: class="fragment" data-fragment-index="2" -->
-
-				  + Embedded Systems<!-- .element: class="fragment" data-fragment-index="3" -->
-
-				  + Supercomputer<!-- .element: class="fragment" data-fragment-index="4" -->
-
-				  + Smartphones<!-- .element: class="fragment" data-fragment-index="5" -->
+					+ Server<!-- .element: class="fragment" data-fragment-index="2" -->
+					+ Embedded Systems<!-- .element: class="fragment" data-fragment-index="3" -->
+					+ Supercomputer<!-- .element: class="fragment" data-fragment-index="4" -->
+					+ Smartphones<!-- .element: class="fragment" data-fragment-index="5" -->
 				+ Noch sehr schwach:<!-- .element: class="fragment" data-fragment-index="6" -->
-				  + Desktops
+					+ Desktops
 
 				--
 
 				### Warum Linux?
 				+ OpenSource<!-- .element: class="fragment" data-fragment-index="1" -->
-
 				+ Paketverwaltung<!-- .element: class="fragment" data-fragment-index="2" -->
-
 				+ mehr Auswahl<!-- .element: class="fragment" data-fragment-index="3" -->
-
 				+ große Community<!-- .element: class="fragment" data-fragment-index="4" -->
-
 				+ lernt viel über Betriebssysteme<!-- .element: class="fragment" data-fragment-index="5" -->
-
 				+ etwas sicherer<!-- .element: class="fragment" data-fragment-index="6" -->
 
 
@@ -375,6 +366,7 @@ ehmen
 
 				# Folien
 				https://www.d120.de/workshops
+
 				https://github.com/miterion/linux-vortrag
 
 				</script>

@@ -1,0 +1,9 @@
+.center_svg {
+   width: 912px;
+   height: 595px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -(912/2)px;
+   margin-top: -(595/2)px;
+}
