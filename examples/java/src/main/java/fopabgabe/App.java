@@ -5,7 +5,7 @@ package fopabgabe;
 
 public class App {
     public String getGreeting() {
-        return "Hello world.";
+        return "Hello Ophase.";
     }
 
     public static void main(String[] args) {
