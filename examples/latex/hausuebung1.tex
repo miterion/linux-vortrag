@@ -1,0 +1,90 @@
+\documentclass[accentcolor=2d]{tudaexercise}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+
+
+\title{Mathematik 1 für Informatiker Hausübung Nr. 1}
+\subtitle{Heiko Carrasco, Matrikelnummer XXXXXX}
+\subsubtitle{Gruppe 7}
+
+
+\begin{document}
+
+\maketitle
+\begin{task}{}
+Der NOR-Operator $\downarrow$ ist durch die nachstehende Wahrheitstafel erklärt. Zeigen Sie, dass sich die folgenden logischen Verknüpfungen $\lnot A, A \lor B \text{ und } A\rightarrow B$ einzig mit Hilfe des NOR-Operators ausdrücken lassen! Verwenden Sie dazu Wahrheitstafeln.
+\begin{center}
+
+\begin{tabular}{c|c|c}
+	A & B & A $\downarrow$ B \\ \hline
+	0&0&1 \\
+	0&1&0 \\
+	1&0&0 \\
+	1&1&0 \\
+	
+\end{tabular}
+\end{center}
+\textbf{Lösung:}\\
+$\lnot A$ entspricht $A\downarrow A$, $A \lor B$ entspricht $(A\downarrow B)\downarrow(A\downarrow B)$ und $A\rightarrow B$ lässt sich als $((A\downarrow A)\downarrow B)\downarrow(A\downarrow A)\downarrow B)$. Dies lässt sich an den folgenden Wahrheitstafeln sehen:\\\\
+\begin{tabular}{c|c|c}
+	A & $\lnot A$ & $A\downarrow A$ \\\hline
+	0 & 1 & 1\\
+	1 & 0 & 0\\
+\end{tabular}
+\hspace{1cm}
+\begin{tabular}{c|c|c|c|c}
+	A & B & $A \lor B$ & $A \downarrow B$ &  $(A\downarrow B)\downarrow(A\downarrow B)$ \\\hline
+	0 & 0 & 0 & 1 & 0\\
+	0 & 1 & 1 & 0 & 1\\
+	1 & 0 & 1 & 0 & 1\\
+	1 & 1 & 1 & 0 & 1\\
+\end{tabular}
+\hspace{1cm}
+\begin{tabular}{c|c|c|c}
+	A & B & $A \to B$ & $(A\downarrow B)\downarrow(A\downarrow B)$ \\\hline
+		0 & 0 & 1 & 1 \\
+		0 & 1 & 0 & 0 \\
+		1 & 0 & 1 & 1 \\
+		1 & 1 & 1 & 1 \\
+\end{tabular}
+\end{task}
+\begin{task}{}
+Formulieren Sie mit Hilfe von Quantoren die Aussagen:
+\begin{enumerate}[label=(\alph*)]
+	\item Für zwei beliebige Zahlen $x,y$ existiert eine natürliche Zahl $n$, sodass $nx > y$\\
+	\textbf{Lösung:}\\
+	$\forall xy\exists n \in \mathbb{N}| nx>y $\\
+	Negation: \\
+	$\exists xy\forall n \in \mathbb{N}| \lnot (nx>y)$: Für alle natürlichen Zahlen n gibt es zwei beliebige Zahlen x,y für die nicht gilt: $nx>y$.
+	\item Ganze Zahlen sind natürliche Zahlen oder negativ.\\
+	\textbf{Lösung:}\\
+	$\forall x \in \mathbb{Z}| (x \in \mathbb{N})\lor (x < 0)$\\
+	Negation:\\
+	$\exists x \in \mathbb{Z}| (x \not\in \mathbb{N})\land (x>0)$: Es existiert eine natürliche Zahl x für die gilt: x ist keine natürliche Zahl und x ist größer als 0.
+\end{enumerate}
+Negieren Sie die Aussagen mit Hilfe von Quantoren und formulieren Sie die Negation auch in gesprochener Sprache.
+\end{task}
+\begin{task}{}
+Handelt es sich bei den folgenden Relationen um Äquivalenzrelationen oder Ordnungsrelationen? Begründen Sie. Falls es sich um eine Ordnungsrelation handelt: Ist diese total?
+\begin{enumerate}[label=(\alph*)]
+	\item $A:=\{(x,y)\in \mathbb{N}^* \times \mathbb{N}^*: x \text{ teilt } y\}$,\\
+	\textbf{Lösung:} Die Relation ist reflexiv, da sich eine Zahl durch sich selbst teilen lässt. Sie ist zudem antisymmetrisch. Dies kommt daher, da sie nicht symmetrisch sein kann (Gegenbeispiel: Drei teilt Neun aber Neun teilt nicht drei) muss sie antisymmetrisch sein (siehe Reflexivität). Die Transitivität ergibt sich aus folgender Beobachtung: Seien $x,y,z \in \mathbb{N}^*$ und es gelte $xAy$ und $yAz$. Aus $xAy$ folgt $\exists n \in \mathbb{N}| x *n = y$. Ersetzt man in $yAz$  y durch die vorige Gleichung ergibt sich $(x * n)Az$. Da offensichtlich $xA(x*n)$ gilt teilt damit auch x z, womit die Transitivität bewiesen wäre. Damit handelt es sich per Definition um eine Ordnungrelation. Eine totale Ordnung ist nicht gegeben, ein Gegenbeispiel sind $x=4, y=9$
+	\item $B:=x \text{ und }y \text{ haben eine gemeinsame Großmutter}$\\
+	\textbf{Lösung:} Die Relation ist reflexiv, da eine Person x natürlich die selbe Großmutter wie sie selbst hat. Zudem ist die Relation symmetrisch. Transitivität ist nicht gegeben, Gegenbeispiel wäre die Großmutter mütterlicherseits bei drei Cousins. Damit handelt es sich weder um eine Äquivalenzrelation bzw. eine Ordnungsrelation. 
+\end{enumerate}
+Begründen Sie, warum die folgende Argumentation fehlerhaft ist, d.h. identifizieren Sie die nicht korrekte Folgerung:
+\begin{enumerate}[label=(\arabic*)]
+	\item Eine Relation auf X sei symmetrisch und transitiv, d.h. für beliebige $a,b,c \in X$ gilt:
+	\begin{gather*}
+		a \sim b \Rightarrow b \sim a \text{ und } a\sim b,b \sim c \Rightarrow a \sim c
+	\end{gather*}
+	\item Da $a,b,c$ beliebig sind, gilt auch $a \sim  b \Rightarrow b \sim a \Rightarrow a\sim b\sim a \Rightarrow a\sim a$ auf Grund der Transitivität (wähle c als a).
+	\item Somit folgt die Reflexivität aus Symmetrie und Transitivität.
+\end{enumerate}
+\textbf{Lösung:}
+Der Fehler liegt von zwei auf drei. Gegenbeispiel sei eine Relation, in welcher keine Elemente zueinander in Relation stehen. Diese Relation ist Symmetrisch und Transitiv, aber nicht reflexiv. Dann gilt die Implikationskette aus (2).
+\end{task}
+\end{document}
