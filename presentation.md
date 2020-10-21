@@ -1,5 +1,6 @@
 ---
 pagetitle: Linux Vortrag
+revealjs-url: reveal.js
 controlsTutorial: false
 ---
 

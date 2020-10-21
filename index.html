@@ -7,108 +7,106 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reveal.js/css/reset.css">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="reveal.js/dist/reveal.css">
   <style>
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <style>
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  { color: #cccccc; background-color: #303030; }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ffcfaf; } /* Alert */
-code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
-code span.at { } /* Attribute */
-code span.bn { color: #dca3a3; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #f0dfaf; } /* ControlFlow */
-code span.ch { color: #dca3a3; } /* Char */
-code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
-code span.co { color: #7f9f7f; } /* Comment */
-code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
-code span.do { color: #7f9f7f; } /* Documentation */
-code span.dt { color: #dfdfbf; } /* DataType */
-code span.dv { color: #dcdccc; } /* DecVal */
-code span.er { color: #c3bf9f; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #c0bed1; } /* Float */
-code span.fu { color: #efef8f; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
-code span.kw { color: #f0dfaf; } /* Keyword */
-code span.op { color: #f0efd0; } /* Operator */
-code span.ot { color: #efef8f; } /* Other */
-code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
-code span.sc { color: #dca3a3; } /* SpecialChar */
-code span.ss { color: #cc9393; } /* SpecialString */
-code span.st { color: #cc9393; } /* String */
-code span.va { } /* Variable */
-code span.vs { color: #cc9393; } /* VerbatimString */
-code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
-  </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" href="reveal.js/dist/theme/black.css" id="theme">
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
 
-<section><section id="linux-vortrag" class="title-slide slide level1"><h1>Linux-Vortrag</h1><p>Winterophase 19/20</p>
-<p>Heiko Carrasco</p></section><section id="vortragsfolien" class="slide level2">
+<section>
+<section id="linux-vortrag" class="title-slide slide level1">
+<h1>Linux-Vortrag</h1>
+<p>Winterophase 19/20</p>
+<p>Heiko Carrasco</p>
+</section>
+<section id="vortragsfolien" class="slide level2">
 <h2>Vortragsfolien</h2>
 <p><img data-src="img/qrcode.png" /></p>
 <p><a href="https://tinyurl.com/linux-vortrag">https://tinyurl.com/linux-vortrag</a></p>
-</section><section id="about-me" class="slide level2">
+</section>
+<section id="about-me" class="slide level2">
 <h2>About me</h2>
 <ul>
 <li class="fragment">Heiko Carrasco</li>
 <li class="fragment">Linux Nutzer seit ~2009</li>
 <li class="fragment">Komplett umgestiegen ~2012</li>
 </ul>
-</section><section id="was-ist-linux" class="slide level2">
+</section>
+<section id="was-ist-linux" class="slide level2">
 <h2>Was ist Linux?</h2>
 <blockquote>
 <p>Als Linux oder GNU/Linux bezeichnet man in der Regel freie, unix-ähnliche Mehrbenutzer-Betriebssysteme, die auf dem Linux-Kernel und wesentlich auf GNU-Software basieren.</p>
@@ -116,13 +114,15 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <div class="fragment">
 <p>Wikipedia</p>
 </div>
-</section><section id="warum-mit-linux-beschäftigen" class="slide level2">
+</section>
+<section id="warum-mit-linux-beschäftigen" class="slide level2">
 <h2>Warum mit Linux beschäftigen?</h2>
 <ul>
 <li class="fragment">Es wird euch (viel) im Studium begegnen</li>
 <li class="fragment">Viele relevante Studiumsangelgenheiten werden leichter</li>
 </ul>
-</section><section id="warum-ein-vortrag-und-kein-workshop" class="slide level2">
+</section>
+<section id="warum-ein-vortrag-und-kein-workshop" class="slide level2">
 <h2>Warum ein Vortrag und kein Workshop?</h2>
 <ul>
 <li class="fragment">Mehr Leute erreichen</li>
@@ -130,13 +130,19 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Installationsworkshop im nächsten Slot</li>
 </ul>
 </section></section>
-<section><section id="geschichte" class="title-slide slide level1" data-background-video="img/history.mp4" data-background-video-loop="true"><h1>Geschichte</h1></section><section id="wer-hat-es-erfunden" class="slide level2">
+<section>
+<section id="geschichte" class="title-slide slide level1" data-background-video="img/history.mp4" data-background-video-loop="true">
+<h1 data-background-video="img/history.mp4" data-background-video-loop="true">Geschichte</h1>
+
+</section>
+<section id="wer-hat-es-erfunden" class="slide level2">
 <h2>Wer hat es erfunden?</h2>
 <p><img data-src="img/linus.jpg" /></p>
 <div class="fragment">
 <p>Linus Torvalds</p>
 </div>
-</section><section id="geschichte-1" class="slide level2">
+</section>
+<section id="geschichte-1" class="slide level2">
 <h2>Geschichte</h2>
 <ul>
 <li class="fragment">Am Anfang war das Betriebssystem Unix (1973)</li>
@@ -148,17 +154,20 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="fragment">Sehr erfolgreich, viele Nachbauten</li>
 </ul>
-</section><section id="evolution-of-unix" class="slide level2">
+</section>
+<section id="evolution-of-unix" class="slide level2">
 <h2>Evolution of Unix</h2>
 <p><img data-src="img/1000px-Unix_history-simple.svg.png" style="background:white;" height="500" /></p>
-</section><section id="geschichte-2" class="slide level2">
+</section>
+<section id="geschichte-2" class="slide level2">
 <h2>Geschichte</h2>
 <ul>
 <li class="fragment">Torvalds, damals Studi, wollte seinen eigenen Kernel bauen</li>
 <li class="fragment">Sehr viele Konzepte von Unix übernommen</li>
 <li class="fragment">OpenSourced unter dem Namen Linux (Linus + Freax)</li>
 </ul>
-</section><section id="tux" class="slide level2">
+</section>
+<section id="tux" class="slide level2">
 <h2>Tux</h2>
 <ul>
 <li class="fragment">Wettbewerb für ein Linux Logo</li>
@@ -167,7 +176,12 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <p><img data-src="img/Tux.svg" style="background:white;" /></p>
 </div>
 </section></section>
-<section><section id="open-source" class="title-slide slide level1" data-background-video="img/matrix.mp4" data-background-video-loop="true"><h1>Open Source</h1></section><section id="was-ist-nicht-open-source" class="slide level2">
+<section>
+<section id="open-source" class="title-slide slide level1" data-background-video="img/matrix.mp4" data-background-video-loop="true">
+<h1 data-background-video="img/matrix.mp4" data-background-video-loop="true">Open Source</h1>
+
+</section>
+<section id="was-ist-nicht-open-source" class="slide level2">
 <h2>Was ist <em>nicht</em> Open Source?</h2>
 <ul>
 <li class="fragment">meiste Programme sind in Hochschprachen geschrieben (Java, C++, Go, etc.)</li>
@@ -175,14 +189,16 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">komerzielle Software wird häufig nur in der kompilierten Fassung verteilt</li>
 <li class="fragment">manchmal zusätzlich <em>obfuscated</em></li>
 </ul>
-</section><section id="was-bedeutet-das" class="slide level2">
+</section>
+<section id="was-bedeutet-das" class="slide level2">
 <h2>Was bedeutet das?</h2>
 <ul>
 <li class="fragment">Kein Einblick in die Funktionsweise eines Programms</li>
 <li class="fragment">Keine Änderungsmöglichkeiten</li>
 <li class="fragment">Vollständige Abhängigkeit vom Hersteller</li>
 </ul>
-</section><section id="was-ist-open-source" class="slide level2">
+</section>
+<section id="was-ist-open-source" class="slide level2">
 <h2>Was ist Open Source?</h2>
 <ul>
 <li class="fragment">Quellcode ist öffentlich</li>
@@ -193,7 +209,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Free/Libre Open Source Software</li>
 </ul></li>
 </ul>
-</section><section id="bekanntere-projekte" class="slide level2">
+</section>
+<section id="bekanntere-projekte" class="slide level2">
 <h2>Bekanntere Projekte</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -204,13 +221,16 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <p><img data-src="img/thunderbird.png" /></p>
 </div>
 </div>
-</section><section id="pyophase" class="slide level2">
+</section>
+<section id="pyophase" class="slide level2">
 <h2>pyophase</h2>
 <p><img data-src="img/pyophase.png" /></p>
-</section><section id="pyophase-1" class="slide level2">
+</section>
+<section id="pyophase-1" class="slide level2">
 <h2>pyophase</h2>
 <p><img data-src="img/github-pyophase.png" /></p>
-</section><section id="warum-ist-das-ziemlich-cool" class="slide level2">
+</section>
+<section id="warum-ist-das-ziemlich-cool" class="slide level2">
 <h2>Warum ist das ziemlich cool?</h2>
 <ul>
 <li class="fragment">Weniger Sicherheitslücken (Viele-Augen-Prinzip)
@@ -222,7 +242,12 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Beteiligung an Open Source Projekten als Aushängeschild/CV</li>
 </ul>
 </section></section>
-<section><section id="vorteile-von-linux" class="title-slide slide level1" data-background-video="img/cute_pingu.mp4"><h1>Vorteile von Linux</h1></section><section id="weniger-ressourcenverbrauch" class="slide level2">
+<section>
+<section id="vorteile-von-linux" class="title-slide slide level1" data-background-video="img/cute_pingu.mp4">
+<h1 data-background-video="img/cute_pingu.mp4">Vorteile von Linux</h1>
+
+</section>
+<section id="weniger-ressourcenverbrauch" class="slide level2">
 <h2>Weniger Ressourcenverbrauch</h2>
 <ul>
 <li class="fragment">Linux braucht weniger Leistung als Windows (bei gleicher Benutzung)</li>
@@ -230,7 +255,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Abstürze sind sehr selten</li>
 <li class="fragment">Auch für ältere PCs geeignet</li>
 </ul>
-</section><section id="kostenlos" class="slide level2">
+</section>
+<section id="kostenlos" class="slide level2">
 <h2>Kostenlos</h2>
 <ul>
 <li class="fragment">Linux ist kostenlos
@@ -240,14 +266,16 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Passende Software meistens auch gratis</li>
 <li class="fragment">Lebenslange Updates</li>
 </ul>
-</section><section id="community-support" class="slide level2">
+</section>
+<section id="community-support" class="slide level2">
 <h2>Community Support</h2>
 <ul>
 <li class="fragment">bei Problemen hilft eine große Community</li>
 <li class="fragment">viele Blogs und Foren bieten Lösungen auch für obskure Fragen an</li>
 <li class="fragment">Chatrooms als Austausch- und Frageplattform</li>
 </ul>
-</section><section id="privatsphäre" class="slide level2">
+</section>
+<section id="privatsphäre" class="slide level2">
 <h2>Privatsphäre</h2>
 <ul>
 <li class="fragment">Linux schickt nicht alle eure Daten an Dritte</li>
@@ -258,21 +286,31 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Gesammelte anonyme Daten häufig öffentlich verfügbar</li>
 </ul>
 </section></section>
-<section><section id="paketverwaltung" class="title-slide slide level1" data-background-video="img/package.mp4" data-background-video-loop="true"><h1>Paketverwaltung</h1></section><section id="installieren-von-software-unter-windows" class="slide level2">
+<section>
+<section id="paketverwaltung" class="title-slide slide level1" data-background-video="img/package.mp4" data-background-video-loop="true">
+<h1 data-background-video="img/package.mp4" data-background-video-loop="true">Paketverwaltung</h1>
+
+</section>
+<section id="installieren-von-software-unter-windows" class="slide level2">
 <h2>Installieren von Software unter Windows</h2>
-</section><section id="installer-finden" class="slide level2">
+</section>
+<section id="installer-finden" class="slide level2">
 <h2>1. Installer finden</h2>
 <p><img data-src="img/firefox_google.png" /></p>
-</section><section id="uac-bestätigen" class="slide level2">
+</section>
+<section id="uac-bestätigen" class="slide level2">
 <h2>2. UAC bestätigen</h2>
 <p><img data-src="img/uac-prompt.png" /></p>
-</section><section id="installer-durcklicken" class="slide level2">
+</section>
+<section id="installer-durcklicken" class="slide level2">
 <h2>3. Installer durcklicken</h2>
 <p><img data-src="img/firefox-install.png" /></p>
-</section><section id="profit" class="slide level2">
+</section>
+<section id="profit" class="slide level2">
 <h2>4. Profit</h2>
 <p><img data-src="img/firefox-windows.jpg" /></p>
-</section><section id="installieren-von-software-unter-linux" class="slide level2">
+</section>
+<section id="installieren-von-software-unter-linux" class="slide level2">
 <h2>Installieren von Software unter Linux</h2>
 <ul>
 <li class="fragment">Linuxdistributionen haben meistens eine Paketverwaltung</li>
@@ -280,9 +318,11 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Abhängigkeiten zu anderen Programmen werden intelligent gelöst</li>
 <li class="fragment">Anwendungen werden zentral up-to-date gehalten</li>
 </ul>
-</section><section id="demo" class="slide level2">
+</section>
+<section id="demo" class="slide level2">
 <h2>Demo</h2>
-</section><section id="vorteile-gegenüber-windows" class="slide level2">
+</section>
+<section id="vorteile-gegenüber-windows" class="slide level2">
 <h2>Vorteile gegenüber Windows</h2>
 <ul>
 <li class="fragment">Keine hundert Updater, sondern ein zentrales System</li>
@@ -290,17 +330,24 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Selbst entscheiden wann Updates installiert werden</li>
 </ul>
 </section></section>
-<section><section id="shell" class="title-slide slide level1 slide:" data-background-video="img/hackerman.mp4" data-background-video-loop="true"><h1>Shell</h1></section><section id="shell-1" class="slide level2">
+<section>
+<section id="shell" class="title-slide slide level1 slide:" data-background-video="img/hackerman.mp4" data-background-video-loop="true">
+<h1 class="slide:" data-background-video="img/hackerman.mp4" data-background-video-loop="true">Shell</h1>
+
+</section>
+<section id="shell-1" class="slide level2">
 <h2>Shell</h2>
 <ul>
 <li class="fragment">Programm, welches Befehle entgegenimmt und ausführt</li>
 <li class="fragment">erlaubt das interaktive Starten und Steuern von Programmen</li>
 <li class="fragment">Beispiele: bash, zsh, fish, etc.</li>
 </ul>
-</section><section id="shell-2" class="slide level2">
+</section>
+<section id="shell-2" class="slide level2">
 <h2>Shell</h2>
 <p><img data-src="img/console.png" height="450" /></p>
-</section><section id="befehle" class="slide level2">
+</section>
+<section id="befehle" class="slide level2">
 <h2>Befehle</h2>
 <ul>
 <li class="fragment">mehrere Kategorien</li>
@@ -319,7 +366,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">z.B. <code>git, man</code></li>
 </ul></li>
 </ul>
-</section><section id="argumente-und-pipe" class="slide level2">
+</section>
+<section id="argumente-und-pipe" class="slide level2">
 <h2>Argumente und Pipe</h2>
 <ul>
 <li class="fragment">Können mit Argumenten gesteuert werden
@@ -332,7 +380,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">z.B. <code>cat text.txt | grep -i hello</code></li>
 </ul></li>
 </ul>
-</section><section id="hilfe" class="slide level2">
+</section>
+<section id="hilfe" class="slide level2">
 <h2>Hilfe</h2>
 <ul>
 <li class="fragment">häufig existieren manuals, erreichbar mit <code>man</code></li>
@@ -341,24 +390,32 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Beispiel: <code>man grep</code> oder <code>grep --help</code></li>
 </ul></li>
 </ul>
-</section><section id="wozu-braucht-man-das" class="slide level2">
+</section>
+<section id="wozu-braucht-man-das" class="slide level2">
 <h2>Wozu braucht man das?</h2>
 <ul>
 <li class="fragment">Schnelle und einfache Ausführung von Programmen</li>
 <li class="fragment">Einfach Automatisierung von häufigen Tasks</li>
 <li class="fragment">Fernzugriff</li>
 </ul>
-</section><section id="demo-1" class="slide level2">
+</section>
+<section id="demo-1" class="slide level2">
 <h2>Demo</h2>
 </section></section>
-<section><section id="linux-im-studium" class="title-slide slide level1" data-background-video="img/study.mp4"><h1>Linux im Studium</h1></section><section id="fop" class="slide level2">
+<section>
+<section id="linux-im-studium" class="title-slide slide level1" data-background-video="img/study.mp4">
+<h1 data-background-video="img/study.mp4">Linux im Studium</h1>
+
+</section>
+<section id="fop" class="slide level2">
 <h2>FOP</h2>
 <ul>
 <li class="fragment">Hausübungen in Java und Racket</li>
 <li class="fragment">Müssen auf den (Linux-)Poolrechnern laufen!</li>
 <li class="fragment">Was wenn die Uni schon zu hat?</li>
 </ul>
-</section><section id="section" class="slide level2">
+</section>
+<section id="section" class="slide level2">
 <h2></h2>
 <h3 id="ssh">SSH</h3>
 <ul>
@@ -366,18 +423,21 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">ISP stellt mehrere virtuelle Poolrechner bereit</li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ssh</span> hc82bydi@clientssh1.rbg.informatik.tu-darmstadt.de</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="fu">ssh</span> hc82bydi@clientssh1.rbg.informatik.tu-darmstadt.de</span></code></pre></div>
 </div>
-</section><section id="demo-2" class="slide level2">
+</section>
+<section id="demo-2" class="slide level2">
 <h2>Demo</h2>
-</section><section id="fop-projekt-bachelorpraktikum" class="slide level2">
+</section>
+<section id="fop-projekt-bachelorpraktikum" class="slide level2">
 <h2>FOP-Projekt &amp; Bachelorpraktikum</h2>
 <ul>
 <li class="fragment">Größeres Programmierprojekt</li>
 <li class="fragment">Mehrere Leute arbeiten am gleichen Code</li>
 <li class="fragment">Problem: Wie synchronisiert man den aktuellen Stand?</li>
 </ul>
-</section><section id="section-1" class="slide level2">
+</section>
+<section id="section-1" class="slide level2">
 <h2></h2>
 <h3 id="git">GIT</h3>
 <ul>
@@ -386,20 +446,23 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Weitere praktische Features wie Merges, Branches, etc.</li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> add test.racket</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">git</span> commit -m <span class="st">&quot;Neuer Test&quot;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">git</span> push</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">git</span> add test.racket</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="fu">git</span> commit -m <span class="st">&quot;Neuer Test&quot;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="fu">git</span> push</span></code></pre></div>
 </div>
-</section><section id="demo-3" class="slide level2">
+</section>
+<section id="demo-3" class="slide level2">
 <h2>Demo</h2>
-</section><section id="mathe-12-afe" class="slide level2">
+</section>
+<section id="mathe-12-afe" class="slide level2">
 <h2>Mathe 1,2 AFE</h2>
 <ul>
 <li class="fragment">Abgabe von Hausübungen</li>
 <li class="fragment">Handschrift vielleicht nicht lesbar</li>
 <li class="fragment">Formeln in Word eingeben ist mühsam</li>
 </ul>
-</section><section id="section-2" class="slide level2">
+</section>
+<section id="section-2" class="slide level2">
 <h2></h2>
 <h3 id="latex">LaTeX</h3>
 <ul>
@@ -407,10 +470,16 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">sehr „schöne“ Dokumente</li>
 <li class="fragment">Coporate Design der TU einfach installierbar</li>
 </ul>
-</section><section id="demo-4" class="slide level2">
+</section>
+<section id="demo-4" class="slide level2">
 <h2>Demo</h2>
 </section></section>
-<section><section id="distributionen" class="title-slide slide level1" data-background-video="img/trumpdistribution.mp4" data-background-video-loop="true"><h1>Distributionen</h1></section><section id="distros" class="slide level2">
+<section>
+<section id="distributionen" class="title-slide slide level1" data-background-video="img/trumpdistribution.mp4" data-background-video-loop="true">
+<h1 data-background-video="img/trumpdistribution.mp4" data-background-video-loop="true">Distributionen</h1>
+
+</section>
+<section id="distros" class="slide level2">
 <h2>Distros</h2>
 <ul>
 <li class="fragment">Sammlungen von Programmen und Konfigurationen</li>
@@ -418,10 +487,12 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Bieten installierbare CD- bzw USB Abbilder an</li>
 <li class="fragment">Meistens von Communities oder Firmen veröffentlicht</li>
 </ul>
-</section><section id="beispiele" class="slide level2">
+</section>
+<section id="beispiele" class="slide level2">
 <h2>Beispiele</h2>
 <p><img style="width:50%; background: white;" data-src="img/ubuntu.png"> <img style="width:45%; background: white;" data-src="img/fedora.png"> <img style="width:45%; background: white;" data-src="img/mint.png"> <img style="width:45%;" data-src="img/arch.png"></p>
-</section><section id="section-3" class="slide level2">
+</section>
+<section id="section-3" class="slide level2">
 <h2></h2>
 <p><img data-src="img/ubuntu.png" style="background:white" height="80" /></p>
 <ul>
@@ -430,7 +501,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Zwei Releases pro Jahr</li>
 <li class="fragment">Schönes Design</li>
 </ul>
-</section><section id="section-4" class="slide level2">
+</section>
+<section id="section-4" class="slide level2">
 <h2></h2>
 <p><img data-src="img/fedora.png" style="background:white" height="100" /></p>
 <ul>
@@ -438,7 +510,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Sehr schnelle Updates</li>
 <li class="fragment">Viele Drittanbieterrepos mit copr</li>
 </ul>
-</section><section id="section-5" class="slide level2">
+</section>
+<section id="section-5" class="slide level2">
 <h2></h2>
 <p><img data-src="img/mint.png" style="background:white" height="100" /></p>
 <ul>
@@ -450,33 +523,48 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Vor allem bekannt durch den selbstentwickelten Cinnamon Desktop</li>
 </ul>
 </section></section>
-<section><section id="desktop-umgebungen" class="title-slide slide level1 slide:" data-background-image="img/xp-blur.jpg"><h1>Desktop-Umgebungen</h1></section><section id="desktop-umgebungen-1" class="slide level2">
+<section>
+<section id="desktop-umgebungen" class="title-slide slide level1 slide:" data-background-image="img/xp-blur.jpg">
+<h1 class="slide:" data-background-image="img/xp-blur.jpg">Desktop-Umgebungen</h1>
+
+</section>
+<section id="desktop-umgebungen-1" class="slide level2">
 <h2>Desktop-Umgebungen</h2>
 <ul>
 <li class="fragment">Wahl zwischen verschiedenen Nutzeroberflächen</li>
 <li class="fragment">Oft mit Sammlungen von Programmen</li>
 <li class="fragment">Weitere Anpassungen möglich</li>
 </ul>
-</section><section id="gnome" class="slide level2">
+</section>
+<section id="gnome" class="slide level2">
 <h2>Gnome</h2>
 <p><img style="width:90%;" data-src="img/gnome.jpg"></p>
-</section><section id="kde" class="slide level2">
+</section>
+<section id="kde" class="slide level2">
 <h2>KDE</h2>
 <p><img style="width:90%;" data-src="img/kde.png"></p>
-</section><section id="cinnamon" class="slide level2">
+</section>
+<section id="cinnamon" class="slide level2">
 <h2>Cinnamon</h2>
 <p><img style="width:90%;" data-src="img/cinnamon.jpg"></p>
-</section><section id="i3" class="slide level2">
+</section>
+<section id="i3" class="slide level2">
 <h2>i3</h2>
 <p><img data-src="img/i3.png" /></p>
 </section></section>
-<section><section id="dateisystem" class="title-slide slide level1" data-background-video="img/filesystem.mp4" data-background-video-loop="true"><h1>Dateisystem</h1></section><section id="dateisystem-1" class="slide level2">
+<section>
+<section id="dateisystem" class="title-slide slide level1" data-background-video="img/filesystem.mp4" data-background-video-loop="true">
+<h1 data-background-video="img/filesystem.mp4" data-background-video-loop="true">Dateisystem</h1>
+
+</section>
+<section id="dateisystem-1" class="slide level2">
 <h2>Dateisystem</h2>
 <ul>
 <li class="fragment">Anders strukturiert als bei Windows</li>
 <li class="fragment">Konsole arbeitet direkt mit Dateien</li>
 </ul>
-</section><section id="die-ordnerstruktur" class="slide level2">
+</section>
+<section id="die-ordnerstruktur" class="slide level2">
 <h2>Die Ordnerstruktur</h2>
 <ul>
 <li class="fragment">/ - oberstes (root) Verzeichnis (C:\)</li>
@@ -486,7 +574,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">/tmp - temporäre Dateien</li>
 <li class="fragment">/usr - Systemteile, Software, Bibliotheken</li>
 </ul>
-</section><section id="home-verzeichnis" class="slide level2">
+</section>
+<section id="home-verzeichnis" class="slide level2">
 <h2>Home-Verzeichnis</h2>
 <ul>
 <li class="fragment">Persönliche Daten (Dokumente, Downloads, etc.)</li>
@@ -495,14 +584,20 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">einfach zu kopieren und zu backupen</li>
 </ul></li>
 </ul>
-</section><section id="wie-funktioniert-es" class="slide level2">
+</section>
+<section id="wie-funktioniert-es" class="slide level2">
 <h2>Wie funktioniert es?</h2>
 <ul>
 <li class="fragment">Dateien haben Eigentümer*innen und Gruppenzugehörigkeiten</li>
 <li class="fragment">Dateien haben Attribute (read, write execute)</li>
 </ul>
 </section></section>
-<section><section id="sicherheit" class="title-slide slide level1" data-background-video="img/secure-policy.mp4"><h1>Sicherheit</h1></section><section id="warum-ist-linux-sicher-er" class="slide level2">
+<section>
+<section id="sicherheit" class="title-slide slide level1" data-background-video="img/secure-policy.mp4">
+<h1 data-background-video="img/secure-policy.mp4">Sicherheit</h1>
+
+</section>
+<section id="warum-ist-linux-sicher-er" class="slide level2">
 <h2>Warum ist Linux sicher(-er)?</h2>
 <ul>
 <li class="fragment">Wenig Verbreitung == weniger Viren</li>
@@ -512,7 +607,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 </ul></li>
 <li class="fragment">gute Rechteverwaltung</li>
 </ul>
-</section><section id="rechteverwaltung" class="slide level2">
+</section>
+<section id="rechteverwaltung" class="slide level2">
 <h2>Rechteverwaltung</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -521,7 +617,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <p><img data-src="img/sudo.png" class="fragment" /></p>
 </div>
 </div>
-</section><section id="rechteverwaltung-1" class="slide level2">
+</section>
+<section id="rechteverwaltung-1" class="slide level2">
 <h2>Rechteverwaltung</h2>
 <ul>
 <li class="fragment">Linux User sind normalerweise keine Systemadmins</li>
@@ -529,15 +626,16 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Dabei meist Nachfrage nach dem Nutzerpasswort</li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sudo</span> rm -rf / <span class="co"># niemals ausführen</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>[<span class="ex">sudo</span>] password for <span class="va">$USER</span>:</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="ex">Sorry</span>, try again.</span>
-<span id="cb3-4"><a href="#cb3-4"></a>[<span class="ex">sudo</span>] password for <span class="va">$USER</span>:</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="ex">Sorry</span>, try again.</span>
-<span id="cb3-6"><a href="#cb3-6"></a>[<span class="ex">sudo</span>] password for <span class="va">$USER</span>:</span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="ex">sudo</span>: 3 incorrect password attempts</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">sudo</span> rm -rf / <span class="co"># niemals ausführen</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>[<span class="ex">sudo</span>] password for <span class="va">$USER</span>:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="ex">Sorry</span>, try again.</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>[<span class="ex">sudo</span>] password for <span class="va">$USER</span>:</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="ex">Sorry</span>, try again.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>[<span class="ex">sudo</span>] password for <span class="va">$USER</span>:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="ex">sudo</span>: 3 incorrect password attempts</span></code></pre></div>
 </div>
-</section><section id="rechteverwaltung-2" class="slide level2">
+</section>
+<section id="rechteverwaltung-2" class="slide level2">
 <h2>Rechteverwaltung</h2>
 <ul>
 <li class="fragment">User können trotzdem noch viel kaputt machen…</li>
@@ -545,7 +643,12 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Euer home ist nur eingeschränkt geschützt</li>
 </ul>
 </section></section>
-<section><section id="nachteile-von-linux" class="title-slide slide level1" data-background-video="img/penguin.mp4"><h1>Nachteile von Linux</h1></section><section id="nachteile" class="slide level2">
+<section>
+<section id="nachteile-von-linux" class="title-slide slide level1" data-background-video="img/penguin.mp4">
+<h1 data-background-video="img/penguin.mp4">Nachteile von Linux</h1>
+
+</section>
+<section id="nachteile" class="slide level2">
 <h2>Nachteile</h2>
 <ul>
 <li class="fragment">Libreoffice und Co. können nicht mit Microsoft Office mithalten</li>
@@ -557,13 +660,19 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Erfordert Einarbeitung</li>
 </ul>
 </section></section>
-<section><section id="windows" class="title-slide slide level1" data-background-video="img/windows.mp4"><h1>Windows</h1></section><section id="windows-1" class="slide level2">
+<section>
+<section id="windows" class="title-slide slide level1" data-background-video="img/windows.mp4">
+<h1 data-background-video="img/windows.mp4">Windows</h1>
+
+</section>
+<section id="windows-1" class="slide level2">
 <h2>Windows</h2>
 <ul>
 <li class="fragment">Manchmal braucht man noch Windows für $Dinge</li>
 <li class="fragment">Voller Umstieg kann schwierig sein</li>
 </ul>
-</section><section id="dual-boot" class="slide level2">
+</section>
+<section id="dual-boot" class="slide level2">
 <h2>Dual-Boot</h2>
 <ul>
 <li class="fragment">Linux kann parallel zu Windows installiert werden</li>
@@ -571,25 +680,30 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Auswahl des Betriebssystems beim Start des Computers</li>
 <li class="fragment">keine Performanceeinbußen</li>
 </ul>
-</section><section id="section-6" class="slide level2">
+</section>
+<section id="section-6" class="slide level2">
 <h2></h2>
 <h3 id="installer">Installer</h3>
 <p><img data-src="img/ubuntu_dualboot.png" height="500" /></p>
-</section><section id="section-7" class="slide level2">
+</section>
+<section id="section-7" class="slide level2">
 <h2></h2>
 <h3 id="boot-screen">Boot Screen</h3>
 <p><img data-src="img/grub_ubuntu.png" /></p>
-</section><section id="virtuelle-maschine-vm" class="slide level2">
+</section>
+<section id="virtuelle-maschine-vm" class="slide level2">
 <h2>Virtuelle Maschine (VM)</h2>
 <ul>
 <li class="fragment">Virtuelle Maschine mit Windows unter Linux</li>
 <li class="fragment">gut geeignet für kleine Programmsammlungen</li>
 <li class="fragment">etwas schlechtere Performance</li>
 </ul>
-</section><section id="gnome-boxes" class="slide level2">
+</section>
+<section id="gnome-boxes" class="slide level2">
 <h2>Gnome Boxes</h2>
 <p><img data-src="img/windows_vm.png" /></p>
-</section><section id="wine" class="slide level2">
+</section>
+<section id="wine" class="slide level2">
 <h2>Wine</h2>
 <ul>
 <li class="fragment"><em>Wine Is Not an Emulator</em></li>
@@ -598,7 +712,12 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Gute Balance zwischen VM und Dual-Boot</li>
 </ul>
 </section></section>
-<section><section id="abschluss" class="title-slide slide level1" data-background-video="img/end.mp4"><h1>Abschluss</h1></section><section id="verbreitung-von-linux" class="slide level2">
+<section>
+<section id="abschluss" class="title-slide slide level1" data-background-video="img/end.mp4">
+<h1 data-background-video="img/end.mp4">Abschluss</h1>
+
+</section>
+<section id="verbreitung-von-linux" class="slide level2">
 <h2>Verbreitung von Linux</h2>
 <ul>
 <li class="fragment">Sehr stark:
@@ -613,7 +732,8 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">Desktops</li>
 </ul></li>
 </ul>
-</section><section id="warum-linux" class="slide level2">
+</section>
+<section id="warum-linux" class="slide level2">
 <h2>Warum Linux?</h2>
 <ul>
 <li class="fragment">OpenSource</li>
@@ -625,62 +745,87 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
 <li class="fragment">sicherer als Windows</li>
 </ul>
 </section></section>
-<section id="fragen" class="title-slide slide level1" data-background-video="img/question.mp4"><h1>Fragen</h1></section>
-<section id="folien" class="title-slide slide level1"><h1>Folien</h1><p><a href="https://www.d120.de/workshops">https://www.d120.de/workshops</a></p>
-<p><a href="https://github.com/miterion/linux-vortrag">https://github.com/miterion/linux-vortrag</a></p></section>
-<section><section id="linux-installieren" class="title-slide slide level1"><h1>Linux installieren</h1></section><section id="architektur-eures-rechners-erfahren" class="slide level2">
+<section id="fragen" class="title-slide slide level1" data-background-video="img/question.mp4">
+<h1 data-background-video="img/question.mp4">Fragen</h1>
+
+</section>
+
+<section id="folien" class="title-slide slide level1">
+<h1>Folien</h1>
+<p><a href="https://www.d120.de/workshops">https://www.d120.de/workshops</a></p>
+<p><a href="https://github.com/miterion/linux-vortrag">https://github.com/miterion/linux-vortrag</a></p>
+</section>
+
+<section>
+<section id="linux-installieren" class="title-slide slide level1">
+<h1>Linux installieren</h1>
+
+</section>
+<section id="architektur-eures-rechners-erfahren" class="slide level2">
 <h2>1. Architektur eures Rechners erfahren</h2>
 <ul>
 <li class="fragment">32 oder 64 Bit</li>
 <li class="fragment">Windows + Pause oder nach Systeminformationen suchen</li>
 </ul>
-</section><section id="section-8" class="slide level2">
+</section>
+<section id="section-8" class="slide level2">
 <h2></h2>
 <p><img data-src="img/windows-system-information.png" /></p>
-</section><section id="distribution-und-evt.-desktopumgebung-gewählt" class="slide level2">
+</section>
+<section id="distribution-und-evt.-desktopumgebung-gewählt" class="slide level2">
 <h2>2. Distribution und evt. Desktopumgebung gewählt</h2>
 <ul>
 <li class="fragment">Ubuntu, Fedora, Linux Mint, etc.</li>
 <li class="fragment">ggf. Gnome, Cinnamon, KDE, etc.</li>
 </ul>
-</section><section id="lts-ja-oder-nein" class="slide level2">
+</section>
+<section id="lts-ja-oder-nein" class="slide level2">
 <h2>3. LTS ja oder nein</h2>
 <ul>
 <li class="fragment">falls vorhanden zwischen Long Term Support und „normaler“ Version wählen</li>
 <li class="fragment">mit LTS Versionen macht man i.d.R. nichts falsch</li>
 </ul>
-</section><section id="iso-herunterladen" class="slide level2">
+</section>
+<section id="iso-herunterladen" class="slide level2">
 <h2>4. ISO herunterladen</h2>
-</section><section id="mit-etcher-o.ä.-auf-usb-stick-brennen" class="slide level2">
+</section>
+<section id="mit-etcher-o.ä.-auf-usb-stick-brennen" class="slide level2">
 <h2>5. Mit <em>etcher</em> o.ä. auf USB-Stick „brennen“</h2>
 <p><img data-src="img/etcher.png" height="400" /></p>
-</section><section id="stick-booten" class="slide level2">
+</section>
+<section id="stick-booten" class="slide level2">
 <h2>6. Stick Booten</h2>
 <ul>
 <li class="fragment">BIOS blendet notwendige Tasten häufig ein</li>
 <li class="fragment">oft F12, F1, F2</li>
 </ul>
-</section><section id="installeranweisungen-folgen" class="slide level2">
+</section>
+<section id="installeranweisungen-folgen" class="slide level2">
 <h2>7. Installeranweisungen folgen</h2>
 </section></section>
     </div>
   </div>
 
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="reveal.js/plugin/notes/notes.js"></script>
+  <script src="reveal.js/plugin/search/search.js"></script>
+  <script src="reveal.js/plugin/zoom/zoom.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
         // Push each slide change to the browser history
         history: true,
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
         ]
       });
     </script>
